@@ -1,4 +1,4 @@
-package kris;
+package interview.algorithm.ans;
 
 /**
  * Created by zhouxuan on 16/7/5.

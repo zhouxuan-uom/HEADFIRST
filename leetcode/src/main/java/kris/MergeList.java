@@ -1,13 +1,11 @@
 package kris;
 
-import java.util.List;
-
 /**
  * Created by zhouxuan on 16/7/5.
  */
 public class MergeList {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode l3;
+    public ListNodeKris mergeTwoLists(ListNodeKris l1, ListNodeKris l2) {
+        ListNodeKris l3;
         if (l1 == null) {
             return l2;
         }

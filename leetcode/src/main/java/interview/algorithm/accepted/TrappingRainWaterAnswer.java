@@ -1,4 +1,4 @@
-package interview.algorithm.ans;
+package interview.algorithm.accepted;
 
 import interview.algorithm.TrappingRainWater;
 
