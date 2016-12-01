@@ -1,4 +1,4 @@
-package interview.algorithm;
+package interview.algorithm.questions;
 
 /**
  * Divide two integers without using multiplication, division and mod operator.

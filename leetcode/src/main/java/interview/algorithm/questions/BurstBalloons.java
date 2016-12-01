@@ -1,4 +1,4 @@
-package interview.algorithm;
+package interview.algorithm.questions;
 
 /**
  * Given n balloons, indexed from 0 to n-1.

@@ -1,4 +1,6 @@
-package interview.algorithm;
+package interview.algorithm.questions;
+
+import interview.algorithm.struct.TreeNode;
 
 import java.util.List;
 

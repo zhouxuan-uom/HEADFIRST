@@ -1,6 +1,6 @@
 package interview.algorithm.ans;
 
-import interview.algorithm.ReverseWordsInAString;
+import interview.algorithm.questions.ReverseWordsInAString;
 
 /**
  * Created by zhouxuan on 16/8/24.

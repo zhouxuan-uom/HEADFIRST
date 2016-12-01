@@ -1,4 +1,4 @@
-package interview.algorithm;
+package interview.algorithm.struct;
 
 /**
  * Created by zhouxuan on 16/8/24.

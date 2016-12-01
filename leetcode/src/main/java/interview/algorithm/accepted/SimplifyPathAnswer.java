@@ -1,6 +1,6 @@
 package interview.algorithm.accepted;
 
-import interview.algorithm.SimplifyPath;
+import interview.algorithm.questions.SimplifyPath;
 
 import java.util.Stack;
 

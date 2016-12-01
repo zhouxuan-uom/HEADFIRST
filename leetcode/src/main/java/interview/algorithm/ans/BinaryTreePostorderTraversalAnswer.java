@@ -1,7 +1,7 @@
 package interview.algorithm.ans;
 
-import interview.algorithm.BinaryTreePostorderTraversal;
-import interview.algorithm.TreeNode;
+import interview.algorithm.questions.BinaryTreePostorderTraversal;
+import interview.algorithm.struct.TreeNode;
 
 import java.util.List;
 

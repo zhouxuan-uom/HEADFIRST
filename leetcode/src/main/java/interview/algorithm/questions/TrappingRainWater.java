@@ -1,4 +1,4 @@
-package interview.algorithm;
+package interview.algorithm.questions;
 
 /**
  * Given n non-negative integers representing an elevation map where the width

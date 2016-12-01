@@ -1,6 +1,6 @@
 package interview.algorithm.ans;
 
-import interview.algorithm.DivideTwoIntegers;
+import interview.algorithm.questions.DivideTwoIntegers;
 
 /**
  * Created by zhouxuan on 16/8/24.

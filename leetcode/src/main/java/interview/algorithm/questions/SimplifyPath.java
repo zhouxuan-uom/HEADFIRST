@@ -1,4 +1,4 @@
-package interview.algorithm;
+package interview.algorithm.questions;
 
 /**
  * Given an absolute path for a file (Unix-style), simplify it.

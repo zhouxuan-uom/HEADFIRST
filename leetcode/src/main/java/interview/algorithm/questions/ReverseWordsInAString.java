@@ -1,4 +1,4 @@
-package interview.algorithm;
+package interview.algorithm.questions;
 
 /**
  * Given an input string, reverse the string word by word.

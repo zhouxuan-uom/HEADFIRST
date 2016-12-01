@@ -1,6 +1,6 @@
 package interview.algorithm.ans;
 
-import interview.algorithm.SingleNumberII;
+import interview.algorithm.questions.SingleNumberII;
 
 /**
  * Created by zhouxuan on 16/8/19.

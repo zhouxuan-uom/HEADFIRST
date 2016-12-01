@@ -1,6 +1,6 @@
 package interview.algorithm.ans;
 
-import interview.algorithm.RemoveInvalidParentheses;
+import interview.algorithm.questions.RemoveInvalidParentheses;
 
 import java.util.List;
 import java.util.Stack;

@@ -1,6 +1,6 @@
 package interview.algorithm.ans;
 
-import interview.algorithm.RotateList;
+import interview.algorithm.questions.RotateList;
 
 /**
  * Created by zhouxuan on 16/9/1.

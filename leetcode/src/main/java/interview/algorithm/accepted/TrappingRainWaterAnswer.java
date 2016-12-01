@@ -1,6 +1,6 @@
 package interview.algorithm.accepted;
 
-import interview.algorithm.TrappingRainWater;
+import interview.algorithm.questions.TrappingRainWater;
 
 /**
  * Created by zhouxuan on 16/8/19.

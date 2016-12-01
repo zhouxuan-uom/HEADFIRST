@@ -1,6 +1,6 @@
 package interview.algorithm.ans;
 
-import interview.algorithm.BurstBalloons;
+import interview.algorithm.questions.BurstBalloons;
 
 /**
  * 根据DP的基本公式

@@ -1,6 +1,6 @@
 package interview.algorithm.accepted;
 
-import interview.algorithm.AddTwoNumbers;
+import interview.algorithm.questions.AddTwoNumbers;
 import interview.algorithm.ans.ListNode;
 
 /**
