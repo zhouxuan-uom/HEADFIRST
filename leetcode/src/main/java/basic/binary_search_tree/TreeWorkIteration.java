@@ -1,14 +1,17 @@
 package basic.binary_search_tree;
 
+import java.util.Stack;
+
 /**
  * Created by zhouxuan on 2017/5/3.
  */
-public class TreeWork {
+public class TreeWorkIteration {
     public static void inorder(Node root) {
-        if (root != null) {
-            inorder(root.left);
-            System.out.println(root.value);
-            inorder(root.right);
+        Stack<Node> stack = new Stack<Node>();
+        Node node = root;
+        while (node != null) {
+            stack.push(node);
+            node = node.left;
         }
     }
 

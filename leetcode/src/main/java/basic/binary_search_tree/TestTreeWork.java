@@ -16,16 +16,16 @@ public class TestTreeWork {
 
     @Test
     public void inorder() {
-        TreeWork.inorder(treeRoot);
+        TreeWorkRecursion.inorder(treeRoot);
     }
 
     @Test
     public void preorder() {
-        TreeWork.preorder(treeRoot);
+        TreeWorkRecursion.preorder(treeRoot);
     }
 
     @Test
     public void postorder() {
-        TreeWork.postorder(treeRoot);
+        TreeWorkRecursion.postorder(treeRoot);
     }
 }

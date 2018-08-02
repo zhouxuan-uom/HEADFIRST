@@ -63,4 +63,8 @@ public class MaximalRectangleAnswer implements MaximalRectangle {
         }
         return maxArea;
     }
+
+    public static void main(String[] args) {
+        System.out.println("1234".substring(3,3));
+    }
 }
