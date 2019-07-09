@@ -1,0 +1,24 @@
+{
+  "aliyunResult": {
+    "avgloadStorageContextDuration": 0.9360,
+    "avgpikaInitTime": 10.8470,
+    "avgstorageEngineInitTime": 23.8311,
+    "avgtotalInitTime": 39.1800,
+    "count": 198121,
+    "loadStorageContextDuration": 185433.0,
+    "pikaInitTime": 2149005.0,
+    "storageEngineInitTime": 4721440.0,
+    "totalInitTime": 7762369.0
+  },
+  "shxResult": {
+    "avgloadStorageContextDuration": 0.1946,
+    "avgpikaInitTime": 104.6011,
+    "avgstorageEngineInitTime": 3.2770,
+    "avgtotalInitTime": 143.1523,
+    "count": 57178,
+    "loadStorageContextDuration": 11125.0,
+    "pikaInitTime": 5980879.0,
+    "storageEngineInitTime": 187369.0,
+    "totalInitTime": 8185161.0
+  }
+}

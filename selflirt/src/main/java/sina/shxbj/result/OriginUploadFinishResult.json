@@ -1,0 +1,36 @@
+{
+  "aliyunResult": {
+    "avgtotalDispatchTime": 79.0096,
+    "avgtotalInitMediaLibTime": 8.8071,
+    "avgtotalLastPieceSizeDivReadContentTime": 96591.8226,
+    "avgtotalLastPieceSizeDivUploadContentTime": 4113.9145,
+    "avgtotalNotifyTranscodeTime": 180.6998,
+    "avgtotalPostUploadTime": 281.2310,
+    "avgtotalWholeSizeDivMergeCostTime": 186783.0549,
+    "count": 198121,
+    "totalDispatchTime": 15653448.0,
+    "totalInitMediaLibTime": 1744863.0,
+    "totalLastPieceSizeDivReadContentTime": 19136868484.7201,
+    "totalLastPieceSizeDivUploadContentTime": 815052836.1157,
+    "totalNotifyTranscodeTime": 35800410.0,
+    "totalPostUploadTime": 55717756.0,
+    "totalWholeSizeDivMergeCostTime": 37005645616.3550
+  },
+  "shxResult": {
+    "avgtotalDispatchTime": 102.7626,
+    "avgtotalInitMediaLibTime": 106.8397,
+    "avgtotalLastPieceSizeDivReadContentTime": 76337.0925,
+    "avgtotalLastPieceSizeDivUploadContentTime": 1470.0615,
+    "avgtotalNotifyTranscodeTime": 543.1902,
+    "avgtotalPostUploadTime": 863.1382,
+    "avgtotalWholeSizeDivMergeCostTime": 43052.6988,
+    "count": 57178,
+    "totalDispatchTime": 5875759.0,
+    "totalInitMediaLibTime": 6108878.0,
+    "totalLastPieceSizeDivReadContentTime": 4364802273.3654,
+    "totalLastPieceSizeDivUploadContentTime": 84055176.0635,
+    "totalNotifyTranscodeTime": 31058524.0,
+    "totalPostUploadTime": 49352514.0,
+    "totalWholeSizeDivMergeCostTime": 2461667206.4426
+  }
+}

@@ -12,6 +12,7 @@
         <module>leetcode</module>
         <module>shiro</module>
         <module>selflirt</module>
+        <module>redisson</module>
     </modules>
 
 

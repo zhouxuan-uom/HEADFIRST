@@ -1,9 +1,9 @@
 package sina.log.model;
 
-import com.google.common.base.Splitter;
 import lombok.Data;
 
-import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by zhouxuan on 2018/8/1
@@ -24,16 +24,26 @@ public class AccessLogLine {
     String params;
     String responseLength;
     String response;
+    String methodName;
 
     public AccessLogLine(String tempString) {
-        int access = tempString.indexOf("access");
-        if (access == -1) {
-            System.out.println(tempString);
-            return;
+        Pattern pattern = Pattern.compile("\\[INFO] (\\d{8}) (\\d{2}:\\d{2}:\\d{2}\\.\\d{3}) \\[catalina-exec-.*] access - " +
+                "\\(from (\\d+\\.\\d+\\.\\d+\\.\\d+)\\), (.*) (.*\\.json) status=(\\d+), cost=(\\d+) ms, header=(.*), " +
+                "params=(.*), response \\(len=(\\d+)\\) (\\{.*}) (req.*)");
+        Matcher matcher = pattern.matcher(tempString);
+        if (matcher.find()) {
+            this.date = matcher.group(1);
+            this.timeOfLog = matcher.group(2);
+            this.fromIp = matcher.group(3);
+            this.httpMethod = matcher.group(4);
+            this.methodName = matcher.group(5);
+            this.status = matcher.group(6);
+            this.costTime = matcher.group(7);
+            this.header = matcher.group(8);
+            this.params = matcher.group(9);
+            this.responseLength = matcher.group(10);
+            this.response = matcher.group(11);
+            this.requestId = matcher.group(12);
         }
-        List<String> list = Splitter.on(' ').splitToList(tempString.substring(0, access));
-        this.date = list.get(1);
-        this.timeOfLog = list.get(2);
-        this.fromIp=tempString.substring(tempString.indexOf("from")+5, tempString.indexOf("),"));
     }
 }

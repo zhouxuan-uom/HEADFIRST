@@ -1,0 +1,12 @@
+{
+  "aliyunResult": {
+    "avgLengthDivTime": 239.6124,
+    "count": 198121,
+    "totalLengthDivTime": 47472231.4923
+  },
+  "shxResult": {
+    "avgLengthDivTime": 199.4063,
+    "count": 57178,
+    "totalLengthDivTime": 11401648.6849
+  }
+}

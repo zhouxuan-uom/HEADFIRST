@@ -16,7 +16,6 @@ import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
-import java.util.Scanner;
 import java.util.zip.GZIPInputStream;
 
 /**
@@ -37,11 +36,17 @@ public class LogDealerImpl implements LogDealer {
         InputStream in = null;
         List<AccessLogLine> logLines = Lists.newArrayList();
         try {
-            in = new GZIPInputStream(new FileInputStream(filePath));
-            Scanner sc = new Scanner(in);
-            while (sc.hasNextLine()) {
-                logLines.add(new AccessLogLine(sc.nextLine()));
+            in = new FileInputStream(filePath);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+            long before = System.currentTimeMillis();
+            String line;
+            while ((line = br.readLine()) != null) {
+                AccessLogLine accessLogLine = new AccessLogLine(line);
+                if (accessLogLine.getDate() != null && !accessLogLine.getDate().isEmpty()) {
+                    logLines.add(accessLogLine);
+                }
             }
+            System.out.println("loop spends:" + (System.currentTimeMillis() - before));
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

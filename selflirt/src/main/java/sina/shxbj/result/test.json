@@ -1,0 +1,16 @@
+{
+  "trace.is_success": true,
+  "time.upload_file.end": "2018-08-13 17:56:06:659",
+  "trace.end": "2018-08-13 17:56:06:660",
+  "info.templateName": "544x960.24",
+  "info.type": "uploadOutput",
+  "trace.start": "2018-08-13 17:56:06:476",
+  "info.job_id": "0d20f7c9-9edf-11e8-9062-351c7cefae8e",
+  "info.format": "mp4",
+  "info.file_size": 1093961,
+  "info.lable": "mp4_hd",
+  "info.is_dag": false,
+  "time.upload_file.start": "2018-08-13 17:56:06:476",
+  "time.upload_file.duration": 183,
+  "trace.duration": 184
+}

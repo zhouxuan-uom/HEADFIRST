@@ -1,0 +1,12 @@
+{
+  "aliyunResult": {
+    "avgtotalWholeSizeDivUploadPieceTime": 8057.6454,
+    "count": 174500,
+    "totalWholeSizeDivUploadPieceTime": 1406059107.7794
+  },
+  "shxResult": {
+    "avgtotalWholeSizeDivUploadPieceTime": 9399.5492,
+    "count": 50099,
+    "totalWholeSizeDivUploadPieceTime": 470908013.6331
+  }
+}

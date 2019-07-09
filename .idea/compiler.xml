@@ -7,15 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="leetcode" />
-        <module name="selflirt" />
         <module name="shiro" />
+        <module name="redisson" />
+        <module name="selflirt" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="HEADFIRST" target="1.8" />
-      <module name="leetcode" target="1.8" />
-      <module name="selflirt" target="1.8" />
-      <module name="shiro" target="1.8" />
+      <module name="HEADFIRST" target="8" />
+      <module name="leetcode" target="8" />
+      <module name="redisson" target="8" />
+      <module name="selflirt" target="8" />
+      <module name="shiro" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
