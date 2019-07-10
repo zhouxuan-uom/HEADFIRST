@@ -24,14 +24,11 @@ public class Main {
         binaryStreamDemo(redissonClient);
     }
 
-    private static void binaryStreamDemo(RedissonClient redissonClient) throws IOException {
+    private static void stringDemo(RedissonClient redissonClient) {
         //hint: 底层redis存储方式使用的是string形式
-        RBinaryStream rBinaryStream = redissonClient.getBinaryStream("binary_stream_demo_key");
-        byte[] content = "test byte array".getBytes();
-        rBinaryStream.set(content);
-        byte[] readResult = new byte[15];
-        rBinaryStream.getInputStream().read(readResult);
-        System.out.println("binary stream: " + new String(readResult));
+        RBucket<String> stringRBucket = redissonClient.getBucket("string_demo_key");
+        stringRBucket.set("string_demo_value");
+        System.out.println("string: " + stringRBucket.get());
     }
 
     private static void objectDemo(RedissonClient redissonClient) {
@@ -42,10 +39,15 @@ public class Main {
         System.out.println("object: " + JSON.toJSONString(demoObject));
     }
 
-    private static void stringDemo(RedissonClient redissonClient) {
+    private static void binaryStreamDemo(RedissonClient redissonClient) throws IOException {
         //hint: 底层redis存储方式使用的是string形式
-        RBucket<String> stringRBucket = redissonClient.getBucket("string_demo_key");
-        stringRBucket.set("string_demo_value");
-        System.out.println("string: " + stringRBucket.get());
+        RBinaryStream rBinaryStream = redissonClient.getBinaryStream("binary_stream_demo_key");
+        byte[] content = "test byte array".getBytes();
+        rBinaryStream.set(content);
+        byte[] readResult = new byte[15];
+        rBinaryStream.getInputStream().read(readResult);
+        System.out.println("binary stream: " + new String(readResult));
     }
+
+
 }

@@ -13,11 +13,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="HEADFIRST" target="8" />
-      <module name="leetcode" target="8" />
-      <module name="redisson" target="8" />
-      <module name="selflirt" target="8" />
-      <module name="shiro" target="8" />
+      <module name="HEADFIRST" target="1.5" />
+      <module name="leetcode" target="1.6" />
+      <module name="redisson" target="1.5" />
+      <module name="selflirt" target="1.5" />
+      <module name="shiro" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

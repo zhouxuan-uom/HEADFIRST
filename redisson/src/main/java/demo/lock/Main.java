@@ -3,6 +3,7 @@ package demo.lock;
 import demo.RedissonDemo;
 import org.redisson.api.RLock;
 import org.redisson.api.RReadWriteLock;
+import org.redisson.api.RSemaphore;
 import org.redisson.api.RedissonClient;
 
 import java.util.concurrent.TimeUnit;
@@ -18,7 +19,9 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         RedissonClient redissonClient1 = RedissonDemo.init();
         RedissonClient redissonClient2 = RedissonDemo.init();
-        reentrantLockDemo(redissonClient1, redissonClient2);
+//        reentrantLockDemo(redissonClient1, redissonClient2);
+//        readWriteLockDemo(redissonClient1, redissonClient2);
+        semaphoreDemo(redissonClient1, redissonClient2);
     }
 
     private static void reentrantLockDemo(RedissonClient redissonClient1, RedissonClient redissonClient2) throws InterruptedException {
@@ -39,7 +42,29 @@ public class Main {
     }
 
     private static void readWriteLockDemo(RedissonClient redissonClient1, RedissonClient redissonClient2) {
-        RReadWriteLock rReadWriteLock = redissonClient1.getReadWriteLock("read_write_lock_demo_key");
+        RReadWriteLock rReadWriteLock1 = redissonClient1.getReadWriteLock("read_write_lock_demo_key");
+        RReadWriteLock rReadWriteLock2 = redissonClient2.getReadWriteLock("read_write_lock_demo_key");
+        System.out.println("thread 1 try read lock: " + rReadWriteLock1.readLock().tryLock());
+        System.out.println("thread 2 try read lock: " + rReadWriteLock2.readLock().tryLock());
+        System.out.println("thread 1 try write lock: " + rReadWriteLock1.writeLock().tryLock());
+        rReadWriteLock2.readLock().unlock();
+        System.out.println("thread 1 try write lock after thread 2 unlocked: " + rReadWriteLock1.writeLock().tryLock());
+        rReadWriteLock1.readLock().unlock();
+        System.out.println("thread 1 try write lock after thread 1&2 unlocked: " + rReadWriteLock1.writeLock().tryLock());
+        rReadWriteLock1.writeLock().unlock();
+        System.out.println("thread 2 try write lock after thread 1 unlocked write lock: " + rReadWriteLock2.writeLock().tryLock());
+    }
 
+    private static void semaphoreDemo(RedissonClient redissonClient1, RedissonClient redissonClient2) {
+        RSemaphore semaphore1 = redissonClient1.getSemaphore("semaphore_demo_key");
+        RSemaphore semaphore2 = redissonClient2.getSemaphore("semaphore_demo_key");
+        semaphore1.trySetPermits(3);
+        System.out.println("thread 1 try acquire: " + semaphore1.tryAcquire());
+        System.out.println("thread 1 try acquire: " + semaphore1.tryAcquire());
+        System.out.println("thread 2 try acquire: " + semaphore2.tryAcquire());
+        System.out.println("thread 2 try acquire: " + semaphore2.tryAcquire());
+        semaphore1.release();
+        semaphore1.release();
+        semaphore2.release();
     }
 }
