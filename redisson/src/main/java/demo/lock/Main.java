@@ -22,6 +22,7 @@ public class Main {
 //        reentrantLockDemo(redissonClient1, redissonClient2);
 //        readWriteLockDemo(redissonClient1, redissonClient2);
         semaphoreDemo(redissonClient1, redissonClient2);
+
     }
 
     private static void reentrantLockDemo(RedissonClient redissonClient1, RedissonClient redissonClient2) throws InterruptedException {
@@ -46,25 +47,25 @@ public class Main {
         RReadWriteLock rReadWriteLock2 = redissonClient2.getReadWriteLock("read_write_lock_demo_key");
         System.out.println("thread 1 try read lock: " + rReadWriteLock1.readLock().tryLock());
         System.out.println("thread 2 try read lock: " + rReadWriteLock2.readLock().tryLock());
-        System.out.println("thread 1 try write lock: " + rReadWriteLock1.writeLock().tryLock());
-        rReadWriteLock2.readLock().unlock();
-        System.out.println("thread 1 try write lock after thread 2 unlocked: " + rReadWriteLock1.writeLock().tryLock());
-        rReadWriteLock1.readLock().unlock();
-        System.out.println("thread 1 try write lock after thread 1&2 unlocked: " + rReadWriteLock1.writeLock().tryLock());
-        rReadWriteLock1.writeLock().unlock();
-        System.out.println("thread 2 try write lock after thread 1 unlocked write lock: " + rReadWriteLock2.writeLock().tryLock());
+//        System.out.println("thread 1 try write lock: " + rReadWriteLock1.writeLock().tryLock());
+//        rReadWriteLock2.readLock().unlock();
+//        System.out.println("thread 1 try write lock after thread 2 unlocked: " + rReadWriteLock1.writeLock().tryLock());
+//        rReadWriteLock1.readLock().unlock();
+//        System.out.println("thread 1 try write lock after thread 1&2 unlocked: " + rReadWriteLock1.writeLock().tryLock());
+//        rReadWriteLock1.writeLock().unlock();
+//        System.out.println("thread 2 try write lock after thread 1 unlocked write lock: " + rReadWriteLock2.writeLock().tryLock());
     }
 
     private static void semaphoreDemo(RedissonClient redissonClient1, RedissonClient redissonClient2) {
-        RSemaphore semaphore1 = redissonClient1.getSemaphore("semaphore_demo_key");
-        RSemaphore semaphore2 = redissonClient2.getSemaphore("semaphore_demo_key");
+        RSemaphore semaphore1 = redissonClient1.getSemaphore("semaphore_demo_key1");
+        RSemaphore semaphore2 = redissonClient2.getSemaphore("semaphore_demo_key1");
         semaphore1.trySetPermits(3);
-        System.out.println("thread 1 try acquire: " + semaphore1.tryAcquire());
-        System.out.println("thread 1 try acquire: " + semaphore1.tryAcquire());
-        System.out.println("thread 2 try acquire: " + semaphore2.tryAcquire());
-        System.out.println("thread 2 try acquire: " + semaphore2.tryAcquire());
-        semaphore1.release();
-        semaphore1.release();
-        semaphore2.release();
+//        System.out.println("thread 1 try acquire: " + semaphore1.tryAcquire());
+//        System.out.println("thread 1 try acquire: " + semaphore1.tryAcquire());
+//        System.out.println("thread 2 try acquire: " + semaphore2.tryAcquire());
+//        System.out.println("thread 2 try acquire: " + semaphore2.tryAcquire());
+//        semaphore1.release();
+//        semaphore1.release();
+//        semaphore2.release();
     }
 }
