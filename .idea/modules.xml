@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HEADFIRST.iml" filepath="$PROJECT_DIR$/.idea/HEADFIRST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HEADFIRST.iml" filepath="$PROJECT_DIR$/HEADFIRST.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/redisson/redisson.iml" filepath="$PROJECT_DIR$/redisson/redisson.iml" />
       <module fileurl="file://$PROJECT_DIR$/selflirt/selflirt.iml" filepath="$PROJECT_DIR$/selflirt/selflirt.iml" />
