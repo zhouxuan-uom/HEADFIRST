@@ -53,7 +53,7 @@
         <!--由于创建的是springboot下的web项目，所以，默认会有这个-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
 
